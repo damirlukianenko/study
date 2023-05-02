@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { pageReload } from 'js/errorHandler';
+import { reloadOnErrors } from '@/components/developer-ui/helpers/errorHandlers';
+
 import ReloadOn from 'components/icons/ReloadOn.vue';
 
 let storage = window.localStorage;
@@ -41,7 +42,9 @@ initStorage();
 function setReloadConfigs(): void {
     if (isErrorReloadOn.value) {
         isErrorReloadOn.value = true;
-        window.onerror = pageReload;
+        window.onerror = (event) => {
+            reloadOnErrors(event);
+        } 
         iconColor.value = 'success';
         reloadStateText.value = 'on';
     }

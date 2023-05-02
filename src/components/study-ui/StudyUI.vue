@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import RefreshPageButton from 'components/developer-ui/RefreshPageButton.vue';
 import CustomConsoleLog from 'components/developer-ui/CustomConsoleLog.vue';
-import AutoReload from 'components/developer-ui/AutoReload.vue';
+import ErrorAutoReload from 'components/developer-ui/ErrorAutoReload.vue';
 import ErrorStatus from 'components/developer-ui/ErrorStatus.vue';
 
 
@@ -27,7 +27,7 @@ import ErrorStatus from 'components/developer-ui/ErrorStatus.vue';
                 </Column>
 
                 <Column flex="flex">
-                    <AutoReload />
+                    <ErrorAutoReload />
                     <RefreshPageButton />
                 </Column>
             </Row>

@@ -1,29 +1,37 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import Warning from 'components/icons/Warning.vue';
+import { errorsCount } from 'components/developer-ui/helpers/errorHandlers';
 
-
+/* class for working with errors */
 class Error {
     exists: boolean;
     count: number;
 
-    constructor(exists = true, count = 0) {
+    constructor(exists = false, count = 1) {
         this.exists = exists;
         this.count = count;
     }
 }
-
 let error = new Error();
+let errorExists = ref(error.exists);
+
+setInterval(() => {
+    if (errorsCount > 0) {
+        errorExists.value = true;
+    }
+}, 1000)
+
 
 </script>
 
 <template>
     <!-- hover tooltip -->
-    <NTooltip v-if="error.exists" trigger="hover" :delay="500">
+    <NTooltip v-if="errorExists" trigger="hover" :delay="500">
         <template #trigger>
 
             <!-- icon with text -->
-            <NButton icon-placement="left" class="is-row columns-bottom no-padding no-hover-bg-i gap-xs " quaternary
+            <NButton icon-placement="left" class="is-row columns-bottom no-padding no-hover-bg-i gap-xs base-transition" quaternary
                 type="error">
                 <template #icon>
                     <NIcon size="2rem" :component="Warning">
