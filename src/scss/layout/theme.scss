@@ -1,0 +1,15 @@
+/* import base styling */
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@100;200;400;700;900&display=swap');
+
+@import './../../scss/base/reset.scss';
+@import './../../scss/base/fonts.scss';
+
+.theme {
+    font-family: "Sofia Sans", sans-serif;
+}
+
+.layout-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,24 @@
+@import 'scss/variables/sizes.scss';
+
+/* Paddings */
+.p-0,
+.no-padding {
+    padding: 0;
+}
+
+.px-4 {
+    padding: 0 .25rem;
+}
+
+.px-2 {
+    padding: 0 .5rem;
+}
+
+.p-s {
+    padding: $small;
+}
+
+/* Margins */
+.m-0 {
+    margin: 0;
+}

@@ -1,0 +1,23 @@
+{
+    "empty vue 3 component skeleton": {
+        "prefix": [
+            "vs",
+            "vsc",
+            "vbe"
+        ],
+        "body": [
+            "<script setup lang=\"ts\">",
+            "",
+            "</script>",
+            "",
+            "<template>",
+            "",
+            "</template>",
+            "",
+            "<style lang=\"scss\" scoped>",
+            "",
+            "</style>"
+        ],
+        "description": "vue start component"
+    }
+}

@@ -1,0 +1,64 @@
+@import 'scss/variables/sizes.scss';
+
+.flex,
+.is-flex {
+    display: flex;
+}
+
+.row {
+    @extend .flex;
+    flex-wrap: wrap;
+}
+
+.right {
+    justify-content: flex-end;
+}
+
+.between,
+.columns-between {
+    justify-content: space-between;
+}
+
+.y-center {
+    align-items: center;
+}
+
+.y-bottom, 
+.columns-bottom {
+    align-items: end;
+}
+
+.x-center {
+    justify-content: center;
+}
+
+.x-y-center {
+    @extend .flex, .x-center, .y-center;
+}
+
+.flex-y-center {
+    @extend .flex, .y-center;
+}
+
+.flex-column {
+    @extend .flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    @extend .flex, .x-y-center;
+}
+
+.flex-column-center {
+    @extend .flex-column, .x-y-center;
+}
+
+/* Gaps (row-gap and column-gap) */
+.gap-xs {
+    gap: 0 $xs;
+}
+
+.gap-sm,
+.has-small-gap {
+    gap: 0 $small;
+}

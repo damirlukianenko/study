@@ -1,0 +1,38 @@
+@import 'scss/variables/sizes.scss';
+
+.text-center {
+    text-align: center;
+}
+
+/* SIZES (in rems) */
+.is-small {
+    font-size: $small;
+}
+
+.is-regular,
+.fz-regular, 
+.regular-font-size {
+    font-size: $regular;
+}
+
+.regular-l-font-size {
+    font-size: $regular-l;
+}
+
+.larger-font-size {
+    font-size: $regular-l;
+}
+
+.large-font-size {
+    font-size: $large;
+}
+
+.bigger {
+    font-size: $large;
+}
+
+.rem-x2,
+.is-2rem,
+.x2-rem {
+    font-size: $extra-large;
+}

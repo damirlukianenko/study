@@ -1,0 +1,62 @@
+{
+    "new let variable": {
+        "prefix": [
+            "qs",
+            "letq",
+            "letqs",
+            "lq"
+        ],
+        "body": [
+            "let ${3:${1:element}} = document.querySelector('${2:.${1:element}}');",
+            "console.log('${3:${1:element}}', ${3:${1:element}});",
+            "$0"
+        ],
+        "description": "console.log"
+    },
+    "console.log()": {
+        "prefix": [
+            "clgv"
+        ],
+        "body": [
+            "console.log('${1:variable}: ', ${1:variable});",
+            "$0"
+        ],
+        "description": "console.log"
+    },
+    "comment": {
+        "prefix": [
+            "comm"
+        ],
+        "body": [
+            "/* $0 */"
+        ],
+        "description": "comment"
+    },
+    "array with object": {
+        "prefix": [
+            "arr",
+            "arob",
+            "arobj"
+        ],
+        "body": [
+            "let ${1:arrayObjects} = [",
+            "    { ${2:key}: '${3:value}', },",
+            "    { ${4:${2:key}}: '${5:${3:value}}', },",
+            "]"
+        ],
+        "description": "array with object"
+    },
+    "array of users": {
+        "prefix": "users",
+        "body": [
+            "let users = [",
+            "    { id: 0, name: 'Damir 1', age: 23, hasChildren: false },",
+            "    { id: 1, name: 'Damir 2', age: 24, hasChildren: true },",
+            "    { id: 2, name: 'Damir 3', age: 25, hasChildren: false },",
+            "    { id: 3, name: 'Damir 4', age: 26, hasChildren: false },",
+            "    { id: 4, name: 'Damir 5', age: 27, hasChildren: true },",
+            "];"
+        ],
+        "description": "array of users"
+    }
+}

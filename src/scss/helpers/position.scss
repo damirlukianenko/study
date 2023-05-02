@@ -1,0 +1,26 @@
+.absolute {
+    position: absolute;
+}
+
+.overlay {
+    @extend .absolute;
+}
+
+.at-bottom {
+    @extend .absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.at-top {
+    @extend .absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.pin-right, 
+.pin-to-right {
+    right: 0;
+}

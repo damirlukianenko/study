@@ -1,0 +1,62 @@
+/*
+    Примерно такой же файл tsconfig.json использован
+    в нашем проекте Vue. 
+    
+    Что понять, что делает конкретный "ключ" 
+    просто наводи на него мышкой и читай
+    всплывающую подсказку
+
+*/
+
+{
+    "include": [
+        "env.d.ts",
+        "index.d.ts",
+        "src/**/*",
+        "src/**/*.vue",
+    ],
+    "compilerOptions": {
+        "baseUrl": ".",
+        // алиасы для путей (очень полезно)
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ]
+        },
+        // библиотеки, о которых я писал в уроке
+        "lib": [
+            "ES2016",
+            "DOM",
+            "DOM.Iterable"
+        ],
+        "watch": true,
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
+        "useDefineForClassFields": true,
+        // нужно для Vue
+        "jsx": "preserve",
+        // `"noImplicitThis": true` is part of `strict`
+        "noImplicitThis": true,
+        "strict": true,
+        // Required in Vite
+        "isolatedModules": true,
+        // For `<script setup>`
+        // это тоже для Vue
+        "preserveValueImports": true,
+        // Enforce using `import type` instead of `import` for types
+        // нужно для импортов во Vue
+        "importsNotUsedAsValues": "error",
+        "target": "ESNext",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "skipLibCheck": true,
+    },
+    // references позволяет разбивать tsconfig.json
+    // на несколько частей
+    "references": [
+        {
+            "path": "./tsconfig.config.json"
+        }
+    ]
+}

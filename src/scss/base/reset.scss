@@ -1,0 +1,63 @@
+/* Sofia Sans */
+@import 'scss/variables/all-variables.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@100;200;400;700;900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $base-font-size;
+}
+
+body {
+    font-size: 1rem;
+    font-family: $base-font-family;
+    color: $base-font-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 $base-heading-margin 0;
+}
+
+p {
+    margin: 0 0 $base-paragraph-margin 0;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
