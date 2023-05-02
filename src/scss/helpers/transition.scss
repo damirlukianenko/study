@@ -3,3 +3,8 @@
 .base-transition {
     transition: all $base-duration;
 }
+
+.short-transition,
+.has-short-transition {
+    transition: all $is-short;
+}

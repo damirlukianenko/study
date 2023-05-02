@@ -27,11 +27,12 @@ setInterval(() => {
 
 <template>
     <!-- hover tooltip -->
-    <NTooltip v-if="errorExists" trigger="hover" :delay="500">
+    <NTooltip trigger="hover" :delay="500">
         <template #trigger>
 
             <!-- icon with text -->
-            <NButton icon-placement="left" class="is-row columns-bottom no-padding no-hover-bg-i gap-xs base-transition" quaternary
+            <NButton :class="{ 'is-visible': errorExists }" icon-placement="left"
+                class="is-hidden is-row columns-bottom no-padding no-hover-bg-i gap-xs has-short-transition" quaternary
                 type="error">
                 <template #icon>
                     <NIcon size="2rem" :component="Warning">
